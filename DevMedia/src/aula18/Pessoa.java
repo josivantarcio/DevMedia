@@ -7,7 +7,7 @@ public class Pessoa{
 	
 	private String nome;
 	private String sobrenome;
-	private LocalDate dtNascimento;
+	private LocalDate dtPartida;
 	
 	public String getNome() {
 		return nome;
@@ -22,10 +22,10 @@ public class Pessoa{
 		this.sobrenome = sobrenome;
 	}
 	public LocalDate getDtNascimento() {
-		return dtNascimento;
+		return dtPartida;
 	}
 	public void setDtNascimento(LocalDate dtNascimento) {
-		this.dtNascimento = dtNascimento;
+		this.dtPartida = dtNascimento;
 	}
 	public CalculaIdade getIdadeCalculada(){
 		return new Idade();
@@ -38,19 +38,19 @@ public class Pessoa{
 	
 			@Override
 			public int getAno() {
-				Period p = Period.between(LocalDate.now(), dtNascimento);	
+				Period p = Period.between(LocalDate.now(), dtPartida);	
 				return p.getYears();
 			}
 	
 			@Override
 			public int getMes() {
-				Period p = Period.between(LocalDate.now(), dtNascimento);
+				Period p = Period.between(LocalDate.now(), dtPartida);
 				return p.getMonths();
 			}
 	
 			@Override
 			public int getDias() {
-				Period p = Period.between(LocalDate.now(), dtNascimento);
+				Period p = Period.between(LocalDate.now(), dtPartida);
 				return p.getDays();
 			}
 			

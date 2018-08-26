@@ -9,7 +9,7 @@ public class Aula {
 		//Testando...
 		pessoa.setNome("Josevan");
 		pessoa.setSobrenome("Oliveira");
-		pessoa.setDtNascimento(LocalDate.of(2018, 11, 14));
+		pessoa.setDtNascimento(LocalDate.of(2018, 10, 7));
 		
 		System.out.printf(
 				"Olá %s %s! Faltam %d Anos, %d Meses e %d Dias para sua partida.",
